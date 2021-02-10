@@ -53,8 +53,6 @@ def print_schedule():
 # Hides all frames on the screen
 
 def hide_all_frames():
-    file_new_frame.pack_forget()
-    edit_cut_frame.pack_forget()
     recent_sched_frame.place_forget()
     select_sched_frame.place_forget()
     student_info_frame.place_forget()
@@ -96,12 +94,12 @@ student_label = Label(student_info_frame, text="Student Info", bg='cyan', fg='bl
 menubar = Menu(root)
 filemenu = Menu(menubar, tearoff=0)
 filemenu.add_command(label="New Schedule", command=new_schedule)
-filemenu.add_command(label="Open Schedule", command=new_schedule)
-filemenu.add_command(label="Save Schedule", command=donothing)
-filemenu.add_command(label="Delete Schedule", command=donothing)
-filemenu.add_command(label="Export Schedule", command=donothing)
-filemenu.add_command(label="Recent Schedules", command=donothing)
-filemenu.add_command(label="Print Schedule", command=donothing)
+filemenu.add_command(label="Open Schedule", command=open_schedule)
+filemenu.add_command(label="Save Schedule", command=save_schedule)
+filemenu.add_command(label="Delete Schedule", command=delete_schedule)
+filemenu.add_command(label="Export Schedule", command=export_schedule)
+filemenu.add_command(label="Recent Schedules", command=recent_schedule)
+filemenu.add_command(label="Print Schedule", command=print_schedule)
 
 filemenu.add_separator()
 
